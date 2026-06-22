@@ -1,0 +1,25 @@
+.product-details {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  align-items: center;
+}
+
+.product-details img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.details {
+  max-width: 500px;
+}
+
+.details button {
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

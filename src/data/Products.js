@@ -10,6 +10,7 @@ const Products = [
     price: 58000,
     image: hpLaptop,
     category: "Laptop",
+    description: "High-performance laptop for students and professionals."
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const Products = [
     price: 70000,
     image: iphone14,
     category: "Mobile",
+    description: "Powerful smartphone with excellent camera quality."
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const Products = [
     price: 3000,
     image: sonyHeadphones,
     category: "Audio",
+    description: "Premium wireless headphones with noise cancellation."
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const Products = [
     price: 2500,
     image: smartwatch,
     category: "Watch",
+    description: "Track fitness, calls, and notifications on your wrist."
   },
 ];
 
