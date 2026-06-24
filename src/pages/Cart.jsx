@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import "./Cart.css";
 
@@ -8,6 +9,8 @@ function Cart() {
     removeFromCart,
     clearCart,
   } = useContext(CartContext);
+
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce(
     (total, item) => total + item.price,
@@ -62,9 +65,7 @@ function Cart() {
           <div className="cart-actions">
             <button
               className="continue-btn"
-              onClick={() =>
-                window.history.back()
-              }
+              onClick={() => navigate("/")}
             >
               Continue Shopping
             </button>

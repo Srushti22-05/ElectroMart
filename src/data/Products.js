@@ -17,7 +17,7 @@ const Products = [
     name: "iPhone 14",
     price: 70000,
     image: iphone14,
-    category: "Mobile",
+    category: "Phone",
     description: "Powerful smartphone with excellent camera quality."
   },
   {
@@ -25,7 +25,7 @@ const Products = [
     name: "Sony Headphones",
     price: 3000,
     image: sonyHeadphones,
-    category: "Audio",
+    category: "Headphone",
     description: "Premium wireless headphones with noise cancellation."
   },
   {

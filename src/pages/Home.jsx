@@ -31,14 +31,45 @@ function Home() {
 
       <h2>Featured Products</h2>
 
+      {/* Category Filter */}
       <div className="category-buttons">
-        <button onClick={() => setCategory("All")}>All</button>
-        <button onClick={() => setCategory("Laptop")}>Laptops</button>
-        <button onClick={() => setCategory("Mobile")}>Mobiles</button>
-        <button onClick={() => setCategory("Audio")}>Audio</button>
-        <button onClick={() => setCategory("Watch")}>Watches</button>
+        <button
+          className={category === "All" ? "active" : ""}
+          onClick={() => setCategory("All")}
+        >
+          All
+        </button>
+
+        <button
+          className={category === "Laptop" ? "active" : ""}
+          onClick={() => setCategory("Laptop")}
+        >
+          Laptops
+        </button>
+
+        <button
+          className={category === "Phone" ? "active" : ""}
+          onClick={() => setCategory("Phone")}
+        >
+          Phones
+        </button>
+
+        <button
+          className={category === "Headphone" ? "active" : ""}
+          onClick={() => setCategory("Headphone")}
+        >
+          Headphones
+        </button>
+
+        <button
+          className={category === "Watch" ? "active" : ""}
+          onClick={() => setCategory("Watch")}
+        >
+          Watches
+        </button>
       </div>
 
+      {/* Search Bar */}
       <input
         type="text"
         placeholder="Search products..."
@@ -47,13 +78,18 @@ function Home() {
         className="search-bar"
       />
 
+      {/* Product Grid */}
       <div className="product-grid">
-        {filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-          />
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+            />
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
       </div>
     </div>
   );

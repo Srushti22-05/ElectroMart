@@ -67,3 +67,12 @@
 .category-buttons button:hover {
   background-color: #1d4ed8;
 }
+
+/* Active button */
+.category-buttons button.active {
+  background-color: #f59e0b;
+  color: black;
+  font-weight: bold;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
